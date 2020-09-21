@@ -1,0 +1,26 @@
+<h1>Welcome </h1>
+<h3>I dint use any styling due to lack of time</h3>
+<form action="/" method="POST">
+  <div>
+    <label for="data">Data</label>
+    <input type="text" id="email" placeholder="Enter the data that you eant to save to the database" name="data" required>
+  </div>
+  <button type="submit">Send</button>
+</form>
+<% if (data) { %>
+  <% for(var i=0; i < data.length; i++) { %>
+    <tr>
+      <td><%= data[i].data %></td><br>
+    </tr>
+  <% } %>
+<% } %>
+
+
+<form action="/users" method="GET">
+  <button type="submit">Get Users info</button>
+</form>
+
+
+<form action="/logout?_method=DELETE" method="POST">
+  <button type="submit">Log Out</button>
+</form>

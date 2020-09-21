@@ -1,0 +1,11 @@
+<p><% if (users) { %>
+    <% for(var i=0; i < users.length; i++) { %>
+      <tr>
+        <td>User Name: <%= users[i].name %></td><br>
+        <td>Mobile Number: <%= users[i].mobileNumber %></td><br>
+        <td>Email: <%= users[i].email %></td><br><br><br>
+      </tr>
+    <% } %>
+  <% } %>
+</p>
+
